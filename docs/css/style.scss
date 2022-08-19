@@ -1,0 +1,119 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.25%;
+  line-height: 1;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 3rem;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 3rem 2rem 0;
+  font-family: Manrope, sans-serif;
+  font-size: 1.4rem;
+  background-color: var(--dark-blue);
+}
+
+button {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  max-width: 540px;
+  padding: 48px 20px 68px;
+  background-color: var(--dark-grayish-blue);
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: var(--neon-green);
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.quote {
+  margin: 1em 0 4rem;
+  color: var(--light-cyan);
+  font-size: 2em;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+}
+
+.divider {
+  max-width: 100%;
+  height: 16px;
+  object-fit: cover;
+}
+
+.button {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: -32px auto 0;
+  background: var(--neon-green);
+  color: var(--light-cyan);
+  img {
+    display: block;
+    margin: auto;
+  }
+  &.loading img {
+    animation: 0.5s ease-in-out infinite alternate dice;
+  }
+}
+
+.attribution {
+  font-size: 1rem;
+  color: var(--light-cyan);
+  a {
+    color: var(--neon-green);
+  }
+}
+
+@media screen and(min-width: 600px) {
+  .card {
+    padding: 48px 40px 68px;
+  }
+}
+
+@media (hover: hover) {
+  .button {
+    &:hover {
+      animation: 1s ease infinite alternate glow;
+    }
+  }
+}
+
+@keyframes glow {
+  to {
+    box-shadow: 0 0 3rem var(--neon-green);
+  }
+}
+
+@keyframes dice {
+  to {
+    transform: rotate(360deg);
+  }
+}
