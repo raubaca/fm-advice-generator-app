@@ -5,7 +5,9 @@ const dice = document.querySelector('#dice');
 const getQuote = async () => {
   dice.classList.add('loading');
   try {
-    const response = await fetch('https://api.adviceslip.com/advice');
+    let response = await fetch('https://api.adviceslip.com/advice', {
+      cache: 'no-cache',
+    });
     if (response.status === 200) {
       const data = await response.json();
       const { id, advice } = data.slip;
