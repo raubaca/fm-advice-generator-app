@@ -27,7 +27,6 @@ body {
   font-family: Manrope, sans-serif;
   font-size: 1.4rem;
   background-color: var(--dark-blue);
-  background: url(/desktop-design.jpg) no-repeat center;
 }
 
 button {
