@@ -9,7 +9,7 @@ const getQuote = async () => {
     if (response.status === 200) {
       const data = await response.json();
       const { id, advice } = data.slip;
-      quoteId.innerText = id;
+      quoteId.innerText = `#${id}`;
       quote.innerText = `“${advice}”`;
     } else {
       throw 'Error fetching advise';

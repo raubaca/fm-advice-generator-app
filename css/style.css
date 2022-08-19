@@ -27,6 +27,7 @@ body {
   font-family: Manrope, sans-serif;
   font-size: 1.4rem;
   background-color: var(--dark-blue);
+  background: url(/desktop-design.jpg) no-repeat center;
 }
 
 button {
@@ -52,7 +53,7 @@ button {
   color: var(--neon-green);
   font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
 }
 
 .quote {
