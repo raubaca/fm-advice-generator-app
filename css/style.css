@@ -19,11 +19,10 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: 1fr 3rem;
   place-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 3rem 2rem 0;
+  padding: 2rem;
   font-family: Manrope, sans-serif;
   font-size: 1.4rem;
   background-color: var(--dark-blue);
@@ -40,8 +39,8 @@ button {
 
 .card {
   width: 100%;
-  max-width: 540px;
-  padding: 48px 20px 68px;
+  max-width: 54rem;
+  padding: 4.8rem 2rem 6.8rem;
   background-color: var(--dark-grayish-blue);
   text-align: center;
   border-radius: 1em;
@@ -59,36 +58,42 @@ button {
   margin: 1em 0 4rem;
   color: var(--light-cyan);
   font-size: 2em;
-  line-height: 38px;
+  line-height: 3.8rem;
   letter-spacing: -0.2px;
 }
 
 .divider {
   max-width: 100%;
-  height: 16px;
+  height: 1.6rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .button {
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 6.4rem;
+  height: 6.4rem;
   border-radius: 50%;
-  margin: -32px auto 0;
+  margin: -3.2rem auto 0;
   background: var(--neon-green);
   color: var(--light-cyan);
+  transition: transform 0.2s ease-in-out;
+}
+.button:active {
+  transform: scale(0.9);
 }
 .button img {
   display: block;
   margin: auto;
 }
 .button.loading img {
-  -webkit-animation: 0.5s ease-in-out infinite alternate dice;
-          animation: 0.5s ease-in-out infinite alternate dice;
+  -webkit-animation: 0.5s ease-in-out infinite alternate roll;
+          animation: 0.5s ease-in-out infinite alternate roll;
 }
 
 .attribution {
+  position: absolute;
+  bottom: 0.5rem;
   font-size: 1rem;
   color: var(--light-cyan);
 }
@@ -98,7 +103,7 @@ button {
 
 @media screen and (min-width: 600px) {
   .card {
-    padding: 48px 40px 68px;
+    padding: 4.8rem 4rem 6.8rem;
   }
 }
 @media (hover: hover) {
@@ -117,12 +122,12 @@ button {
     box-shadow: 0 0 3rem var(--neon-green);
   }
 }
-@-webkit-keyframes dice {
+@-webkit-keyframes roll {
   to {
     transform: rotate(360deg);
   }
 }
-@keyframes dice {
+@keyframes roll {
   to {
     transform: rotate(360deg);
   }
