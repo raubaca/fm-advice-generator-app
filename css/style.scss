@@ -19,10 +19,11 @@ html {
 
 body {
   display: grid;
+  grid-template-rows: 1fr 2rem;
   place-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   font-family: Manrope, sans-serif;
   font-size: 1.4rem;
   background-color: var(--dark-blue);
@@ -88,8 +89,6 @@ button {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 0.5rem;
   font-size: 1rem;
   color: var(--light-cyan);
   a {
